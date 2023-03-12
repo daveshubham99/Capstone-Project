@@ -1,0 +1,15 @@
+img
+{
+    border: 1px solid white;
+    border-radius:30px;
+    width: 100px;
+    height: 100px;
+}
+td,th{
+   
+    vertical-align: middle !important;
+}
+li
+{
+    list-style:none ;
+}

@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/" style="margin-left: 20px;">FOODWEB <i class="fa-solid fa-utensils"></i> </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup"
+    style="float:right; display:flex; justify-content: end;margin-right:20px ;">
+    <div class="navbar-nav" style="margin-right: 30px;">
+   <p *ngIf="login"> <button style="background-color: rgb(107, 137, 130); border-radius: 25px; margin-right:15px ;"><a class="nav-item nav-link active" routerLink="cart"><i class="fa-solid fa-cart-plus"></i>{{totalprice}} $</a></button></p>
+   <p *ngIf="adminlogin"> <a class="nav-item nav-link active" href="addproduct">ADD PRODUCT</a>  </p>
+    <a class="nav-item nav-link active" routerLink="userLogin">USER</a>
+      <a class="nav-item nav-link active" href="admin">ADMIN</a>
+      <p  *ngIf="login"><a class="nav-link" (click)="logout()">LOGOUT</a></p>
+      <a class="nav-item nav-link active" href="userRegister">REGISTER</a>
+      <p  *ngIf="adminlogin"><a class="nav-link" (click)="adminlogout()">AdminLogout</a></p>
+           
+
+    </div>
+  </div>
+</nav>

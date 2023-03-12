@@ -1,0 +1,51 @@
+<div class="home">
+    <div class="side-menu" >
+        <div class="list">
+
+            <ul>
+                <h5>CUSIENES:</h5><br><br>
+                <a (click)="getFoodByall()">
+                    <li>>> ALL</li><br>
+                </a>
+                <a (click)="getFoodByindian()">
+                    <li>>> INDIAN</li><br>
+                </a>
+                <a (click)="getFoodBypursian()">
+                    <li>>> PURSIAN</li><br>
+                </a>
+                <a (click)="getFoodBychinese()">
+                    <li>>> CHINESE</li><br>
+                </a>
+                <a (click)="getFoodByitalian()">
+                    <li>>> ITALIAN</li>
+                </a>
+
+
+            </ul>
+        </div>
+    </div>
+    <div class="image main-display" style="height: 100%;">
+
+            <input type="search" placeholder="Search For Food" style="border-radius: 5px; align-items: center;width:400px ;margin-left: 200px; margin-top: 10px;"[(ngModel)]="searchItem" (change)="search(searchItem)"><input type="submit" (click)="search(searchItem)" value="Search">
+        <ul>
+        <li  *ngFor="let product of CutomerArray">
+            <div class="row" >
+            <!-- <div class="col-md-4 " > -->
+                <div class="card card-body">
+                    <img src="{{product.imageurl}}" alt="">
+                    <h4>{{product.name}}</h4>
+                    <h4>{{product.origin}}</h4>
+                    <h3>{{product.price}}$</h3>
+                    <input type="submit" value="CART" (click)="addtocart(product)">
+                </div>
+
+            <!-- </div> -->
+
+        </div>
+
+ 
+        </li>
+    </ul>
+</div>
+
+</div>

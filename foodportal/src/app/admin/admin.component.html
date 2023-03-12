@@ -1,0 +1,24 @@
+
+<div class="container" style="width: 560px;  align-self: center; margin-top: 50px;">
+    <form class="form-control">
+        <div class="card card-body" style="height: 400px;background-color: lightgrey; " >
+        <div class="form-group ">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" [(ngModel)] = "email" [ngModelOptions]="{standalone:true}" class="form-control"  placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group" style="margin-top: 40px;">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password"[(ngModel)] = "password" [ngModelOptions]="{standalone:true}" class="form-control" placeholder="Password">
+          <small id="emailHelp" class="form-text text-muted">Passwords are always case-sensetive</small>
+        </div>
+       
+        <button type="submit" class="btn btn-primary"  style="margin-top: 80px; margin-bottom: 5px; " (click)="checkadminlogin()">Submit</button>
+        
+    </div>  
+    </form>
+    
+    </div>
+
+
+  <!-- [(ngModel)] = "email" [ngModelOptions]="{standalone:true}"  -->

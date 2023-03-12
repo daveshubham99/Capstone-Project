@@ -1,0 +1,44 @@
+<div class="container">
+<div class="cintent">
+  
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th>image</th>
+            <th scope="col">NAME</th>
+            <th scope="col">PRICE</th>
+            <th scope="col">QUANTITY</th>
+            <th scope="col">TOTAL</th>
+          </tr>
+        </thead>
+        
+        <tbody  *ngFor="let product of CutomerArray">
+          <tr >
+            <th scope="row"></th>
+            <td><div class="image"><img src={{product.imageurl}} alt=""></div></td>
+            <td >{{product.name}}</td>
+            <td>{{product.price}}$</td>
+            <td>1</td>
+            <td>{{product.price}}</td>
+          </tr>
+          
+        </tbody>
+        <tr>
+          <td>  </td>
+          <td>Total Price</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>{{totalprice}}</td>
+  
+      </tr>
+    </table>
+    <input type="submit" value="Proceed To Pay" style="margin-left: 500px; margin-bottom: 50px; width: 250px; background-color: rgb(86, 255, 86);">
+
+
+</div>
+
+
+
+</div>
